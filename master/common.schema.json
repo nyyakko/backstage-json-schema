@@ -1,11 +1,10 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "common",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/master/common.schema.json",
   "type": "object",
   "description": "Common definitions to import from other schemas",
-  "definitions": {
+  "$defs": {
     "reference": {
-      "$id": "#reference",
       "type": "object",
       "description": "A reference by name to another entity.",
       "required": ["kind", "namespace", "name"],
@@ -29,7 +28,6 @@
       }
     },
     "relation": {
-      "$id": "#relation",
       "type": "object",
       "description": "A directed relation from one entity to another.",
       "required": ["type", "targetRef"],
@@ -42,7 +40,7 @@
           "description": "The type of relation."
         },
         "target": {
-          "$ref": "#reference",
+          "$ref": "#/$defs/reference",
           "deprecated": true
         },
         "targetRef": {
@@ -53,7 +51,6 @@
       }
     },
     "status": {
-      "$id": "#status",
       "type": "object",
       "description": "The current status of the entity, as claimed by various sources.",
       "required": [],
@@ -62,13 +59,12 @@
         "items": {
           "type": "array",
           "items": {
-            "$ref": "#statusItem"
+            "$ref": "#/$defs/statusItem"
           }
         }
       }
     },
     "statusItem": {
-      "$id": "#statusItem",
       "type": "object",
       "description": "A specific status item on a well known format.",
       "required": ["type", "level", "message"],
@@ -79,7 +75,7 @@
           "minLength": 1
         },
         "level": {
-          "$ref": "#statusLevel",
+          "$ref": "#/$defs/statusLevel",
           "description": "The status level / severity of the status item."
         },
         "message": {
@@ -87,19 +83,17 @@
           "description": "A brief message describing the status, intended for human consumption."
         },
         "error": {
-          "$ref": "#error",
+          "$ref": "#/$defs/error",
           "description": "An optional serialized error object related to the status."
         }
       }
     },
     "statusLevel": {
-      "$id": "#statusLevel",
       "type": "string",
       "description": "A status level / severity.",
       "enum": ["info", "warning", "error"]
     },
     "error": {
-      "$id": "#error",
       "type": "object",
       "description": "A serialized error object.",
       "required": ["name", "message"],

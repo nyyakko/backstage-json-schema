@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "EntityMeta",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/master/entitymeta.schema.json",
   "description": "Metadata fields common to all versions/kinds of entity.",
   "examples": [
     {

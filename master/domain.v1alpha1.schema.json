@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "DomainV1alpha1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/master/domain.v1alpha1.schema.json",
   "description": "A Domain groups a collection of systems that share terminology, domain models, business purpose, or documentation, i.e. form a bounded context.",
   "examples": [
     {

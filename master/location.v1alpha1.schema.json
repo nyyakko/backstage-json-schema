@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "LocationV1alpha1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/master/location.v1alpha1.schema.json",
   "description": "A location is a marker that references other places to look for catalog data.",
   "examples": [
     {
