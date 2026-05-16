@@ -27,7 +27,7 @@
   ],
   "allOf": [
     {
-      "$ref": "Entity.schema.json"
+      "$ref": "entity.schema.json"
     },
     {
       "type": "object",
