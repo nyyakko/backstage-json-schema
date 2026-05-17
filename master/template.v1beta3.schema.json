@@ -159,7 +159,7 @@
                                 }
                               },
                               "ui:widget": {
-                                "enum": ["textarea", "password", "color", "hidden"]
+                                "enum": ["textarea", "password", "color", "hidden", "radio"]
                               },
                               "format": {
                                 "enum": ["email", "uri", "data-uri", "data-url", "date", "date-time"]
@@ -291,7 +291,7 @@
                                                 }
                                               },
                                               "ui:widget": {
-                                                "enum": ["textarea", "password", "color", "hidden"]
+                                                "enum": ["textarea", "password", "color", "hidden", "radio"]
                                               },
                                               "format": {
                                                 "enum": ["email", "uri", "data-uri", "data-url", "date", "date-time"]
