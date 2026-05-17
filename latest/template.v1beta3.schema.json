@@ -182,6 +182,13 @@
                       "additionalProperties": false
                     }
                   },
+                  "ui:order": {
+                    "type": "array",
+                    "description": "Used to control the order of the fields in the form.",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
                   "backstage:permissions": {
                     "type": "object",
                     "description": "Object used for authorizing the parameter",
