@@ -130,6 +130,8 @@
                         "type": { "$ref": "#/$defs/type" },
                         "description": { "$ref": "#/$defs/description" },
                         "default": { "$ref": "#/$defs/default" },
+                        "enum": { "$ref": "#/$defs/enum" },
+                        "enumNames": { "$ref": "#/$defs/enumNames" },
                         "ui:field": { "$ref": "#/$defs/ui:field" },
                         "ui:autofocus": { "$ref": "#/$defs/ui:autofocus" },
                         "ui:placeholder": { "$ref": "#/$defs/ui:placeholder" },
@@ -262,6 +264,8 @@
                                         "type": { "$ref": "#/$defs/type" },
                                         "description": { "$ref": "#/$defs/description" },
                                         "default": { "$ref": "#/$defs/default" },
+                                        "enum": { "$ref": "#/$defs/enum" },
+                                        "enumNames": { "$ref": "#/$defs/enumNames" },
                                         "ui:field": { "$ref": "#/$defs/ui:field" },
                                         "ui:autofocus": { "$ref": "#/$defs/ui:autofocus" },
                                         "ui:placeholder": { "$ref": "#/$defs/ui:placeholder" },
@@ -604,6 +608,20 @@
     "default": {
       "description": "The default value to be used.",
       "type": ["string", "number", "integer", "boolean", "array", "object"]
+    },
+    "enum": {
+      "type": "array",
+      "description": "Enumeration of values to be selected by the user.",
+      "items": {
+        "type": ["string", "number", "integer", "boolean", "array", "object"]
+      }
+    },
+    "enumNames": {
+      "type": "array",
+      "description": "Aliases that will be shown in place of the enum values previously defined.",
+      "items": {
+        "type": ["string", "number", "integer", "boolean", "array", "object"]
+      }
     },
     "ui:field": {
       "type": "string",
