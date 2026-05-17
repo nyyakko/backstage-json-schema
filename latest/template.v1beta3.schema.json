@@ -123,6 +123,7 @@
                   },
                   "properties": {
                     "type": "object",
+                    "description": "A list of separate fields used to collect values for this form.",
                     "additionalProperties": {
                       "$ref": "#/$defs/property"
                     }
