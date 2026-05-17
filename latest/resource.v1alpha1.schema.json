@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/master/resource.v1alpha1.schema.json",
+  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/latest/resource.v1alpha1.schema.json",
   "description": "A resource describes the infrastructure a system needs to operate, like BigTable databases, Pub/Sub topics, S3 buckets or CDNs. Modelling them together with components and systems allows to visualize resource footprint, and create tooling around them.",
   "examples": [
     {

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/master/template.v1beta3.schema.json",
+  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/latest/template.v1beta3.schema.json",
   "description": "A Template describes a scaffolding task for use with the Scaffolder. It describes the required parameters as well as a series of steps that will be taken to execute the scaffolding task.",
   "examples": [
     {

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/master/api.v1alpha1.schema.json",
+  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/latest/api.v1alpha1.schema.json",
   "description": "An API describes an interface that can be exposed by a component. The API can be defined in different formats, like OpenAPI, AsyncAPI, GraphQL, gRPC, or other formats.",
   "examples": [
     {

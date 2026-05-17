@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/master/common.schema.json",
+  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/latest/common.schema.json",
   "type": "object",
   "description": "Common definitions to import from other schemas",
   "$defs": {

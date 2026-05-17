@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/master/group.v1alpha1.schema.json",
+  "$id": "https://raw.githubusercontent.com/nyyakko/backstage-json-schema/master/latest/group.v1alpha1.schema.json",
   "description": "A group describes an organizational entity, such as for example a team, a business unit, or a loose collection of people in an interest group. Members of these groups are modeled in the catalog as kind User.",
   "examples": [
     {
