@@ -49,7 +49,7 @@
       ]
     },
     "metadata": {
-      "$ref": "/nyyakko/backstage-json-schema/master/master/entitymeta.schema.json"
+      "$ref": "/nyyakko/backstage-json-schema/master/latest/entitymeta.schema.json"
     },
     "spec": {
       "type": "object",
@@ -59,11 +59,11 @@
       "type": "array",
       "description": "The relations that this entity has with other entities.",
       "items": {
-        "$ref": "/nyyakko/backstage-json-schema/master/master/common.schema.json#/$defs/relation"
+        "$ref": "/nyyakko/backstage-json-schema/master/latest/common.schema.json#/$defs/relation"
       }
     },
     "status": {
-      "$ref": "/nyyakko/backstage-json-schema/master/master/common.schema.json#/$defs/status"
+      "$ref": "/nyyakko/backstage-json-schema/master/latest/common.schema.json#/$defs/status"
     }
   }
 }

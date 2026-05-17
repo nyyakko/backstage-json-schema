@@ -25,7 +25,7 @@
   ],
   "allOf": [
     {
-      "$ref": "entity.schema.json"
+      "$ref": "/nyyakko/backstage-json-schema/master/latest/entity.schema.json"
     },
     {
       "type": "object",
