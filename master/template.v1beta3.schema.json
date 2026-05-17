@@ -124,102 +124,7 @@
                   "properties": {
                     "type": "object",
                     "additionalProperties": {
-                      "type": "object",
-                      "properties": {
-                        "title": { "$ref": "#/$defs/title" },
-                        "type": { "$ref": "#/$defs/type" },
-                        "description": { "$ref": "#/$defs/description" },
-                        "default": { "$ref": "#/$defs/default" },
-                        "enum": { "$ref": "#/$defs/enum" },
-                        "enumNames": { "$ref": "#/$defs/enumNames" },
-                        "ui:field": { "$ref": "#/$defs/ui:field" },
-                        "ui:autofocus": { "$ref": "#/$defs/ui:autofocus" },
-                        "ui:placeholder": { "$ref": "#/$defs/ui:placeholder" },
-                        "ui:help": { "$ref": "#/$defs/ui:help" },
-                        "ui:disabled": { "$ref": "#/$defs/ui:disabled" },
-                        "ui:readonly": { "$ref": "#/$defs/ui:readonly" },
-                        "ui:widget": { "$ref": "#/$defs/ui:widget" },
-                        "ui:options": { "$ref": "#/$defs/ui:options" }
-                      },
-                      "anyOf": [
-                        {
-                          "if": {
-                            "properties": {
-                              "type": { "const": "string" }
-                            }
-                          },
-                          "then": {
-                            "properties": {
-                              "ui:options": {
-                                "type": "object",
-                                "properties": {
-                                  "inputType": {
-                                      "type": "string",
-                                      "description": "HTML tag type attribute"
-                                  },
-                                  "label": { "type": "boolean", "default": true }
-                                }
-                              },
-                              "ui:widget": {
-                                "enum": ["textarea", "password", "color", "hidden", "radio"]
-                              },
-                              "format": {
-                                "enum": ["email", "uri", "data-uri", "data-url", "date", "date-time"]
-                              }
-                            }
-                          }
-                        },
-                        {
-                          "if": {
-                            "properties": {
-                              "type": { "const": "boolean" }
-                            }
-                          },
-                          "then": {
-                            "properties": {
-                              "ui:widget": {
-                                "enum": ["radio", "select", "hidden"]
-                              }
-                            }
-                          }
-                        },
-                        {
-                          "if": {
-                            "properties": {
-                              "type": { "enum": ["number", "integer"] }
-                            }
-                          },
-                          "then": {
-                            "properties": {
-                              "ui:widget": {
-                                "enum": ["updown", "range", "maximum", "radio", "hidden"]
-                              }
-                            }
-                          }
-                        },
-                        {
-                          "if": {
-                            "properties": {
-                              "type": { "const": "array" }
-                            }
-                          },
-                          "then": {
-                            "properties": {
-                              "ui:options": {
-                                "type": "object",
-                                "properties": {
-                                  "addable": { "type": "boolean", "default": true },
-                                  "removable": { "type": "boolean", "default": true },
-                                  "orderable": { "type": "boolean", "default": true }
-                                }
-                              },
-                              "ui:widget": {
-                                "enum": ["checkboxes", "files"]
-                              }
-                            }
-                          }
-                        }
-                      ]
+                      "$ref": "#/$defs/property"
                     }
                   },
                   "dependencies": {
@@ -258,102 +163,7 @@
                                   "properties": {
                                     "type": "object",
                                     "additionalProperties": {
-                                      "type": "object",
-                                      "properties": {
-                                        "title": { "$ref": "#/$defs/title" },
-                                        "type": { "$ref": "#/$defs/type" },
-                                        "description": { "$ref": "#/$defs/description" },
-                                        "default": { "$ref": "#/$defs/default" },
-                                        "enum": { "$ref": "#/$defs/enum" },
-                                        "enumNames": { "$ref": "#/$defs/enumNames" },
-                                        "ui:field": { "$ref": "#/$defs/ui:field" },
-                                        "ui:autofocus": { "$ref": "#/$defs/ui:autofocus" },
-                                        "ui:placeholder": { "$ref": "#/$defs/ui:placeholder" },
-                                        "ui:help": { "$ref": "#/$defs/ui:help" },
-                                        "ui:disabled": { "$ref": "#/$defs/ui:disabled" },
-                                        "ui:readonly": { "$ref": "#/$defs/ui:readonly" },
-                                        "ui:widget": { "$ref": "#/$defs/ui:widget" },
-                                        "ui:options": { "$ref": "#/$defs/ui:options" }
-                                      },
-                                      "anyOf": [
-                                        {
-                                          "if": {
-                                            "properties": {
-                                              "type": { "const": "string" }
-                                            }
-                                          },
-                                          "then": {
-                                            "properties": {
-                                              "ui:options": {
-                                                "type": "object",
-                                                "properties": {
-                                                  "inputType": {
-                                                      "type": "string",
-                                                      "description": "HTML tag type attribute"
-                                                  },
-                                                  "label": { "type": "boolean", "default": true }
-                                                }
-                                              },
-                                              "ui:widget": {
-                                                "enum": ["textarea", "password", "color", "hidden", "radio"]
-                                              },
-                                              "format": {
-                                                "enum": ["email", "uri", "data-uri", "data-url", "date", "date-time"]
-                                              }
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "if": {
-                                            "properties": {
-                                              "type": { "const": "boolean" }
-                                            }
-                                          },
-                                          "then": {
-                                            "properties": {
-                                              "ui:widget": {
-                                                "enum": ["radio", "select", "hidden"]
-                                              }
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "if": {
-                                            "properties": {
-                                              "type": { "enum": ["number", "integer"] }
-                                            }
-                                          },
-                                          "then": {
-                                            "properties": {
-                                              "ui:widget": {
-                                                "enum": ["updown", "range", "maximum", "radio", "hidden"]
-                                              }
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "if": {
-                                            "properties": {
-                                              "type": { "const": "array" }
-                                            }
-                                          },
-                                          "then": {
-                                            "properties": {
-                                              "ui:options": {
-                                                "type": "object",
-                                                "properties": {
-                                                  "addable": { "type": "boolean", "default": true },
-                                                  "removable": { "type": "boolean", "default": true },
-                                                  "orderable": { "type": "boolean", "default": true }
-                                                }
-                                              },
-                                              "ui:widget": {
-                                                "enum": ["checkboxes", "files"]
-                                              }
-                                            }
-                                          }
-                                        }
-                                      ]
+                                      "$ref": "#/$defs/property"
                                     }
                                   },
                                   "required": {
@@ -592,79 +402,280 @@
     }
   ],
   "$defs": {
-    "title": {
-      "type": "string",
-      "description": "The title of the field."
-    },
-    "type": {
-      "type": "string",
-      "description": "The type of the field.",
-      "enum": ["string", "number", "integer", "boolean", "array", "object"]
-    },
-    "description": {
-      "type": "string",
-      "description": "The description of the field."
-    },
-    "default": {
-      "description": "The default value to be used.",
-      "type": ["string", "number", "integer", "boolean", "array", "object"]
-    },
-    "enum": {
-      "type": "array",
-      "description": "Enumeration of values to be selected by the user.",
-      "items": {
-        "type": ["string", "number", "integer", "boolean", "array", "object"]
-      }
-    },
-    "enumNames": {
-      "type": "array",
-      "description": "Aliases that will be shown in place of the enum values previously defined.",
-      "items": {
-        "type": ["string", "number", "integer", "boolean", "array", "object"]
-      }
-    },
-    "ui:field": {
-      "type": "string",
-      "enum": [
-        "EntityNamePicker",
-        "EntityPicker",
-        "MultiEntityPicker",
-        "OwnedEntityPicker",
-        "OwnerPicker",
-        "RepoBranchPicker",
-        "RepoUrlPicker",
-        "Secret",
-        "SelectFieldFromApi"
-      ]
-    },
-    "ui:autofocus": {
-      "type": "boolean",
-      "description": "Sets whatever the field will be focused by default."
-    },
-    "ui:placeholder": {
-      "type": ["string", "number", "integer", "boolean", "array", "object"],
-      "description": "The placeholder value of the field."
-    },
-    "ui:help": {
-      "type": "string",
-      "description": "The help message displayed on hover."
-    },
-    "ui:disabled": {
-      "type": "boolean",
-      "description": "Sets whatever the field is disabled or not."
-    },
-    "ui:readonly": {
-      "type": "boolean",
-      "description": "Sets whatever the field is readonly or not."
-    },
-    "ui:widget": {
-      "type": "string",
-      "description": "The type of widget that will be rendered."
-    },
-    "ui:options": {
+    "property": {
       "type": "object",
-      "description": "Options to be passed to the field.",
-      "additionalProperties": true
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the field."
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of the field.",
+          "enum": ["string", "number", "integer", "boolean", "array", "object"]
+        },
+        "description": {
+          "type": "string",
+          "description": "The description of the field."
+        },
+        "ui:field": {
+          "type": "string",
+          "enum": [
+            "EntityNamePicker",
+            "EntityPicker",
+            "MultiEntityPicker",
+            "OwnedEntityPicker",
+            "OwnerPicker",
+            "RepoBranchPicker",
+            "RepoUrlPicker",
+            "Secret",
+            "SelectFieldFromApi"
+          ]
+        },
+        "ui:autofocus": {
+          "type": "boolean",
+          "description": "Sets whatever the field will be focused by default."
+        },
+        "ui:help": {
+          "type": "string",
+          "description": "The help message displayed on hover."
+        },
+        "ui:disabled": {
+          "type": "boolean",
+          "description": "Sets whatever the field is disabled or not."
+        },
+        "ui:readonly": {
+          "type": "boolean",
+          "description": "Sets whatever the field is readonly or not."
+        },
+        "ui:widget": {
+          "type": "string",
+          "description": "The type of widget that will be rendered."
+        },
+        "ui:options": {
+          "type": "object",
+          "description": "Options to be passed to the field.",
+          "additionalProperties": true
+        }
+      },
+      "anyOf": [
+        {
+          "if": {
+            "properties": {
+              "type": { "const": "string" }
+            }
+          },
+          "then": {
+            "properties": {
+              "ui:placeholder": {
+                "type": "string",
+                "description": "The placeholder value of the field."
+              },
+              "ui:options": {
+                "type": "object",
+                "properties": {
+                  "inputType": {
+                    "type": "string",
+                    "description": "HTML tag type attribute"
+                  },
+                  "label": {
+                    "type": "boolean",
+                    "default": true
+                  }
+                }
+              },
+              "ui:widget": {
+                "enum": ["textarea", "password", "color", "hidden", "radio"]
+              },
+              "format": {
+                "enum": ["email", "uri", "data-uri", "data-url", "date", "date-time"]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": { "const": "boolean" }
+            }
+          },
+          "then": {
+            "properties": {
+              "ui:placeholder": {
+                "type": "boolean",
+                "description": "The placeholder value of the field."
+              },
+              "ui:widget": {
+                "enum": ["radio", "select", "hidden"]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": { "enum": ["number", "integer"] }
+            }
+          },
+          "then": {
+            "properties": {
+              "ui:placeholder": {
+                "type": ["number", "integer"],
+                "description": "The placeholder value of the field."
+              },
+              "ui:widget": {
+                "enum": ["updown", "range", "maximum", "radio", "hidden"]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": { "const": "array" }
+            }
+          },
+          "then": {
+            "properties": {
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "description": "The title of the item."
+                  },
+                  "type": {
+                    "description": "The type of the item.",
+                    "enum": ["string", "number", "integer", "boolean", "array", "object"]
+                  }
+                },
+                "anyOf": [
+                  {
+                    "if": {
+                      "properties": {
+                        "type": { "const": "object" }
+                      }
+                    },
+                    "then": {
+                      "properties": {
+                        "required": {
+                          "type": "array",
+                          "description": "A list of required fields."
+                        },
+                        "properties": {
+                          "additionalProperties": {
+                            "$ref": "#/$defs/property"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "if": {
+                      "not": {
+                        "properties": {
+                          "type": { "const": "object" }
+                        }
+                      }
+                    },
+                    "then": {
+                      "properties": {
+                        "enum": {
+                          "type": "array",
+                          "items": {
+                            "type": ["string", "number", "integer", "boolean"]
+                          }
+                        },
+                        "enumNames": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "uniqueItems": {
+                "type": "boolean",
+                "default": false
+              },
+              "ui:placeholder": {
+                "type": "array",
+                "description": "The placeholder value of the field."
+              },
+              "ui:options": {
+                "type": "object",
+                "properties": {
+                  "addable": {
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "removable": {
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "orderable": {
+                    "type": "boolean",
+                    "default": true
+                  }
+                }
+              },
+              "ui:widget": {
+                "enum": ["checkboxes", "files"]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": { "const": "object" }
+            }
+          },
+          "then": {
+            "properties": {
+              "properties": {
+                "additionalProperties": {
+                  "$ref": "#/$defs/property"
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "not": {
+              "properties": {
+                "type": { "const": "object" }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "enum": {
+                "type": "array",
+                "description": "Enumeration of values to be selected by the user.",
+                "items": {
+                  "type": ["string", "number", "integer", "boolean", "array", "object"]
+                }
+              },
+              "enumNames": {
+                "type": "array",
+                "description": "Aliases that will be shown in place of the enum values previously defined.",
+                "items": {
+                  "type": ["string", "number", "integer", "boolean", "array", "object"]
+                }
+              },
+              "default": {
+                "description": "The default value to be used.",
+                "type": ["string", "number", "integer", "boolean", "array", "object"]
+              }
+            }
+          }
+        }
+      ]
     }
   }
 }
