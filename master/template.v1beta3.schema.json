@@ -103,48 +103,41 @@
               "minLength": 1
             },
             "parameters": {
-              "oneOf": [
-                {
-                  "type": "object",
-                  "description": "The JSONSchema describing the inputs for the template.",
+              "type": "array",
+              "description": "A list of separate forms to collect parameters.",
+              "items": {
+                "type": "object",
+                "description": "The JSONSchema describing the inputs for the template.",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "description": "The title of the component."
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "The description of the component."
+                  },
+                  "required": {
+                    "type": "array",
+                    "description": "A list of required fields."
+                  },
                   "properties": {
-                    "backstage:permissions": {
-                      "type": "object",
-                      "description": "Object used for authorizing the parameter",
-                      "properties": {
-                        "tags": {
-                          "type": "array",
-                          "items": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "array",
-                  "description": "A list of separate forms to collect parameters.",
-                  "items": {
+                    "type": "object"
+                  },
+                  "backstage:permissions": {
                     "type": "object",
-                    "description": "The JSONSchema describing the inputs for the template.",
+                    "description": "Object used for authorizing the parameter",
                     "properties": {
-                      "backstage:permissions": {
-                        "type": "object",
-                        "description": "Object used for authorizing the parameter",
-                        "properties": {
-                          "tags": {
-                            "type": "array",
-                            "items": {
-                              "type": "string"
-                            }
-                          }
+                      "tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
                         }
                       }
                     }
                   }
                 }
-              ]
+              }
             },
             "secrets": {
               "type": "object",
