@@ -30,8 +30,7 @@
     "apiVersion": {
       "type": "string",
       "description": "The version of specification format for this particular entity that this is written against.",
-      "minLength": 1,
-      "examples": ["backstage.io/v1alpha1", "my-company.net/v1", "1.0"]
+      "minLength": 1
     },
     "kind": {
       "type": "string",
