@@ -489,6 +489,10 @@
                   "label": {
                     "type": "boolean",
                     "default": true
+                  },
+                  "emptyValue": {
+                    "type": "string",
+                    "default": ""
                   }
                 }
               },
@@ -503,7 +507,28 @@
                 "description": "Regex pattern used for validation.",
                 "examples": ["'^[a-z0-9]+(-[a-z0-9]+)*$'"]
               }
-            }
+            },
+            "anyOf": [
+              {
+                "if": {
+                  "properties": {
+                     "ui:widget": { "const": "textarea" }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "ui:options": {
+                      "type": "object",
+                      "properties": {
+                        "rows": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         },
         {
