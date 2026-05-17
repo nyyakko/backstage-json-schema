@@ -484,15 +484,17 @@
                 "properties": {
                   "inputType": {
                     "type": "string",
-                    "description": "HTML tag type attribute"
+                    "description": "Specifies the native HTML <input> type attribute (e.g., text, password, email, tel) to control browser validation and keyboard layouts."
                   },
                   "label": {
                     "type": "boolean",
-                    "default": true
+                    "default": true,
+                    "description": "A boolean flag to toggle the visibility of the field's text label on the form."
                   },
                   "emptyValue": {
                     "type": "string",
-                    "default": ""
+                    "default": "",
+                    "description": "The fallback value to be bound and submitted when the user completely clears the input field."
                   }
                 }
               },
@@ -521,7 +523,8 @@
                       "type": "object",
                       "properties": {
                         "rows": {
-                          "type": "integer"
+                          "type": "integer",
+                          "description": "An integer that sets the initial visible height (number of text lines) of the textarea container."
                         }
                       }
                     }
@@ -648,15 +651,18 @@
                 "properties": {
                   "addable": {
                     "type": "boolean",
-                    "default": true
+                    "default": true,
+                    "description": "A boolean flag determining whether the user can click an 'Add' button to append new items to the array."
                   },
                   "removable": {
                     "type": "boolean",
-                    "default": true
+                    "default": true,
+                    "description": "A boolean flag determining whether individual items can be deleted from the array using a 'Remove' button."
                   },
                   "orderable": {
                     "type": "boolean",
-                    "default": true
+                    "default": true,
+                    "description": "A boolean flag enabling or disabling control buttons to shift array items up and down in sequence."
                   }
                 }
               },
@@ -728,37 +734,43 @@
                     "type": "array",
                     "items": {
                       "type": "string"
-                    }
+                    },
+                    "description": "An array of string hostnames (e.g., github.com) restricting where the repository can be created."
                   },
                   "allowedOwners": {
                     "type": "array",
                     "items": {
                       "type": "string"
-                    }
+                    },
+                    "description": "An array of allowed organization, group, or user names permitted to own the repository."
                   },
                   "allowedProjects": {
                     "type": "array",
                     "items": {
                       "type": "string"
-                    }
+                    },
+                    "description": "An array of specific project identifiers or keys allowed (primarily for Azure DevOps and Bitbucket)."
                   },
                   "allowedRepos": {
                     "type": "array",
                     "items": {
                       "type": "string"
-                    }
+                    },
+                    "description": "An array of exact, predefined repository names that the user is restricted to selecting."
                   },
                   "requestUserCredentials": {
                     "type": "object",
                     "properties": {
                       "secretName": {
-                        "type": "string"
+                        "type": "string",
+                        "description": "The specific key name under which the requested credential token will be stored in the runtime secrets."
                       },
                       "additionalScopes": {
                         "type": "array",
                         "items": {
                           "type": "string"
-                        }
+                        },
+                        "description": "An array of extra OAuth permissions/scopes required from the provider to complete the task."
                       }
                     }
                   }
@@ -779,17 +791,21 @@
                 "type": "object",
                 "properties": {
                   "catalogFilter": {
-                    "type": "object"
+                    "type": "object",
+                    "description": "An object containing key-value criteria or query operators used to filter which entities appear in the dropdown."
                   },
                   "allowArbitraryValues": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "description": "A boolean flag that allows users to type in and submit custom entity names not currently present in the software catalog."
                   },
                   "autoSelect": {
                     "type": "boolean",
-                    "default": true
+                    "default": true,
+                    "description": "A boolean flag that automatically selects the currently highlighted option when the input field loses focus."
                   },
                   "defaultKind": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "The default entity kind fallback (e.g., Component) to assume if none is explicitly specified."
                   }
                 }
               }
