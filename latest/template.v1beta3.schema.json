@@ -712,6 +712,89 @@
               }
             }
           }
+        },
+        {
+          "if": {
+            "properties": {
+              "ui:field": { "const": "RepoUrlPicker" }
+            }
+          },
+          "then": {
+            "properties": {
+              "ui:options": {
+                "type": "object",
+                "properties": {
+                  "allowedHosts": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "allowedOwners": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "allowedProjects": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "allowedRepos": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "requestUserCredentials": {
+                    "type": "object",
+                    "properties": {
+                      "secretName": {
+                        "type": "string"
+                      },
+                      "additionalScopes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ui:field": { "enum": ["EntityPicker", "MultiEntityPicker"] }
+            }
+          },
+          "then": {
+            "properties": {
+              "ui:options": {
+                "type": "object",
+                "properties": {
+                  "catalogFilter": {
+                    "type": "object"
+                  },
+                  "allowArbitraryValues": {
+                    "type": "boolean"
+                  },
+                  "autoSelect": {
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "defaultKind": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
         }
       ]
     }
