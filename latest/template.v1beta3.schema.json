@@ -735,42 +735,47 @@
                     "items": {
                       "type": "string"
                     },
-                    "description": "An array of string hostnames (e.g., github.com) restricting where the repository can be created."
+                    "description": "List of allowed SCM platform hosts."
+                  },
+                  "allowedOrganizations": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of allowed organizations in the given SCM platform."
                   },
                   "allowedOwners": {
                     "type": "array",
                     "items": {
                       "type": "string"
                     },
-                    "description": "An array of allowed organization, group, or user names permitted to own the repository."
+                    "description": "List of allowed owners in the given SCM platform."
                   },
                   "allowedProjects": {
                     "type": "array",
                     "items": {
                       "type": "string"
                     },
-                    "description": "An array of specific project identifiers or keys allowed (primarily for Azure DevOps and Bitbucket)."
+                    "description": "List of allowed projects in the given SCM platform."
                   },
                   "allowedRepos": {
                     "type": "array",
                     "items": {
                       "type": "string"
                     },
-                    "description": "An array of exact, predefined repository names that the user is restricted to selecting."
+                    "description": "List of allowed repos in the given SCM platform."
                   },
                   "requestUserCredentials": {
                     "type": "object",
+                    "description": "If defined will request user credentials to auth against the given SCM platform.",
                     "properties": {
                       "secretName": {
                         "type": "string",
-                        "description": "The specific key name under which the requested credential token will be stored in the runtime secrets."
+                        "description": "Key used within the template secrets context to store the credential."
                       },
                       "additionalScopes": {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        },
-                        "description": "An array of extra OAuth permissions/scopes required from the provider to complete the task."
+                        "enum": ["gitea", "gerrit", "github", "gitlab", "bitbucket", "azure"],
+                        "description": "Additional permission scopes to request."
                       }
                     }
                   }
